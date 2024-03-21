@@ -19,7 +19,7 @@ export class AppComponent {
 
   firstName: string = '';
   lastName: string = '';
-  
+
   @ViewChild('registrationForm') form: NgForm
 
   genders = [
@@ -32,5 +32,6 @@ export class AppComponent {
     console.log(this.form.value);
     console.log(this.form.value.firstname);
     console.log(this.form.controls['firstname'].value);
+    console.log(this.form.value.address.country);
   }
 }
