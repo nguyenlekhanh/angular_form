@@ -19,6 +19,7 @@ export class AppComponent {
 
   firstName: string = '';
   lastName: string = '';
+  IsAgreed: boolean = false;
 
   @ViewChild('registrationForm') form: NgForm
 
