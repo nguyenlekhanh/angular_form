@@ -17,6 +17,9 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent {
   title = 'angular_form';
 
+  firstName: string = '';
+  lastName: string = '';
+  
   @ViewChild('registrationForm') form: NgForm
 
   genders = [
