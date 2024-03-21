@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, ViewChild } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
@@ -7,6 +8,7 @@ import { RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [
     RouterOutlet,
+    CommonModule,
     FormsModule
   ],
   templateUrl: './app.component.html',
@@ -17,6 +19,11 @@ export class AppComponent {
 
   @ViewChild('registrationForm') form: NgForm
 
+  genders = [
+    {id: 'check-male', value: 'male', display: 'Male'},
+    {id: 'check-female', value: 'female', display: 'Female'},
+    {id: 'check-other', value: 'other', display: 'Other'},
+  ]
   OnFormSubmitted() {
     console.log(this.form);
     console.log(this.form.value);
