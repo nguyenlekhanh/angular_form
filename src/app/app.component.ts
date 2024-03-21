@@ -33,5 +33,27 @@ export class AppComponent {
     console.log(this.form.value.firstname);
     console.log(this.form.controls['firstname'].value);
     console.log(this.form.value.address.country);
+
+    // this.form.setValue({
+    //   firstName: this.form.value.firstname,
+    //   lastName: this.form.value.lastname,
+    //   email: this.form.value.email,
+    //   phone: this.form.value.phone,
+    //   dob: this.form.value.dob,
+    //   gender: this.form.value.gender,
+    //   username: this.form.value.username,
+    //   address: {
+    //     street1: this.form.value.address.street1,
+    //     street2: this.form.value.address.street2,
+    //     country: this.form.value.address.country,
+    //     city: this.form.value.address.city,
+    //     region: this.form.value.address.region,
+    //     postal: this.form.value.address.postal
+    //   }
+    // })
+
+    this.form.form.patchValue({
+      username: "test"
+    })
   }
 }
