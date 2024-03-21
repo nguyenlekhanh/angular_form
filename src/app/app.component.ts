@@ -54,6 +54,8 @@ export class AppComponent {
 
     this.form.form.patchValue({
       username: "test"
-    })
+    });
+
+    this.form.reset();
   }
 }
