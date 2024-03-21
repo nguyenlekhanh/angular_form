@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { Component, ViewChild } from '@angular/core';
+import { FormsModule, NgForm } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -15,7 +15,9 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent {
   title = 'angular_form';
 
-  OnFormSubmitted(form: HTMLFormElement) {
-    console.log(form);
+  @ViewChild('registrationForm') form: NgForm
+
+  OnFormSubmitted() {
+    console.log(this.form);
   }
 }
